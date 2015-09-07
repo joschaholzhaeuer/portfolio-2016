@@ -1,2 +1,2 @@
 # portfolio_new
-This is my personal online portfolio, showing off my work and contact information.
+This is my personal online portfolio, showing my work and contact information.
