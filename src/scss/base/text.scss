@@ -9,14 +9,13 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $heading-font;
+    font-family: $f-heading;
 }
 
 h1 {
     text-transform: uppercase;
-    color: $base-color;
-    margin-top: $small-margin;
-    margin-bottom: $medium-margin;
+    margin-top: $m-small;
+    margin-bottom: $m-medium;
 }
 
 h2 {
@@ -40,7 +39,6 @@ h6 {
 }
 
 p {
-    color: $base-color;
-    margin-top: $small-margin;
-    margin-bottom: $medium-margin;
+    margin-top: $m-small;
+    margin-bottom: $m-medium;
 }

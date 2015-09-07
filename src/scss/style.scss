@@ -1,27 +1,25 @@
 /******************************************************************
 STYLESHEET: STYLE
 
+    > INCLUDES
+    > MIXINS/VARIABLES
+    > BASIC_STYLES
+
 This is the place where scss files get imported.
 ******************************************************************/
 
-/*********************
-INCLUDES
-*********************/
+
+// INCLUDES
 @import "includes/normalize";
 
 
-/*********************
-MIXINS/VARIABLES
-*********************/
-//@import "../../bourbon/bourbon";
+// MIXINS/VARIABLES
 @import "base/variables";
 @import "base/mixins";
 @import "base/typography";
 
 
-/*********************
-BASIC STYLES
-*********************/
+// BASIC_STYLES
 @import "base";
 @import "layout";
 @import "modules";
