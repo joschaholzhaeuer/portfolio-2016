@@ -1,0 +1,40 @@
+/******************************************************************
+STYLESHEET: PORTRAIT
+
+******************************************************************/
+
+.portrait {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $c-base;
+    border-radius: 50%;
+    border: 2px solid $c-base;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 2em;
+}
+
+@include small {
+    .portrait {
+        width: 120px;
+        height: 120px;
+        margin-top: 0;
+    }
+}
+
+@include medium {
+    .portrait {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 2em;
+    }
+}
+
+@include large {
+    .portrait {
+        width: 200px;
+        height: 200px;
+        margin-bottom: $m-large;
+    }
+}

@@ -1,0 +1,196 @@
+/******************************************************************
+STYLESHEET: DIAMOND
+
+******************************************************************/
+
+.diamond {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+
+  &--light {
+    background-color: $c-base;
+    padding: $m-medium 5% $m-medium 5%;
+  }
+
+  &-img {
+    width: 100%;
+  }
+}
+
+@include small {
+    .diamond {
+        padding-top: 130px;
+        padding-bottom: 180px;
+
+         &::after {
+            content: "";
+            display: table;
+            @include prefix( transform, rotate(45deg) );
+            position: absolute;
+            z-index: -10;
+            left: 50%;
+            top: 120px;
+        }
+
+        &--light {
+            background-color: $c-dark;
+
+            &::after {
+                background-color: $c-base;
+                color: $c-light;
+            }
+        }
+
+        &--big {
+
+            &::after {
+                width: 500px;
+                height: 500px;
+                margin-left: -250px;
+            }
+        }
+
+        &-arrow {
+            position: absolute;
+            top: 15px;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 50px solid $black;
+            left: 50%;
+            margin-left: -50px;
+
+            &::after {
+                content: "";
+                display: table;
+                position: absolute;
+                top: 50px;
+                width: 0;
+                height: 0;
+                border-left: 50px solid transparent;
+                border-right: 50px solid transparent;
+                border-top: 50px solid $red;
+                left: 50%;
+                margin-left: -50px;
+            }
+        }
+
+        &-bg {
+            position: absolute;
+            top: 120px;
+            width: 0;
+            height: 0;
+            z-index: -10;
+
+            &--left {
+                border-top: 250px solid transparent;
+                border-bottom: 250px solid transparent;
+                border-left: 250px solid $c-medium;
+                left: 0;
+            }
+
+            &--right {
+                border-top: 250px solid transparent;
+                border-bottom: 250px solid transparent;
+                border-right: 250px solid $c-medium;
+                right: 0;
+            }
+        }
+    }
+}
+
+@include medium {
+    .diamond {
+        padding-top: 200px;
+        padding-bottom: 200px;
+
+        &::after {
+            top: 180px;
+        }
+
+        &--big {
+
+            &::after {
+                width: 600px;
+                height: 600px;
+                margin-left: -300px;
+            }
+        }
+
+        &-arrow {
+            top: 54px;
+            border-left: 70px solid transparent;
+            border-right: 70px solid transparent;
+            border-bottom: 70px solid $black;
+            margin-left: -70px;
+
+            &::after {
+                top: 70px;
+                border-left: 70px solid transparent;
+                border-right: 70px solid transparent;
+                border-top: 70px solid $red;
+                margin-left: -70px;
+            }
+        }
+
+        &-bg {
+            top: 230px;
+        }
+    }
+}
+
+@include large {
+    .diamond {
+        padding-top: 220px;
+        padding-bottom: 200px;
+
+        &::after {
+            top: 200px;
+        }
+
+        &--big {
+
+            &::after {
+                width: 800px;
+                height: 800px;
+                margin-left: -400px;
+            }
+        }
+
+        &-arrow {
+            top: 33px;
+            border-left: 90px solid transparent;
+            border-right: 90px solid transparent;
+            border-bottom: 90px solid $black;
+            margin-left: -90px;
+
+            &::after {
+                top: 90px;
+                border-left: 90px solid transparent;
+                border-right: 90px solid transparent;
+                border-top: 90px solid $red;
+                margin-left: -90px;
+            }
+        }
+
+        &-bg {
+            top: 50px;
+
+            &--left {
+                border-top: 550px solid transparent;
+                border-bottom: 550px solid transparent;
+                border-left: 550px solid $c-medium;
+            }
+
+            &--right {
+                border-top: 550px solid transparent;
+                border-bottom: 550px solid transparent;
+                border-right: 550px solid $c-medium;
+            }
+        }
+    }
+}

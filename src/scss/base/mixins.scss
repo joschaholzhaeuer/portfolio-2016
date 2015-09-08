@@ -8,8 +8,13 @@ STYLESHEET: STYLE
 
 
 // BREAKPOINTS
-
 /* USAGE: @include medium {...}; */
+@mixin small {
+    @media only screen and (min-width: #{$w-small}) {
+        @content;
+    }
+}
+
 @mixin medium {
     @media only screen and (min-width: #{$w-medium}) {
         @content;
@@ -23,8 +28,19 @@ STYLESHEET: STYLE
 }
 
 
-// TYPOGRAPHY
+// PREFIXES
+/* USAGE: @include prefix(transform, rotate(42deg), webkit ms); */
+@mixin prefix($property, $value, $vendors: webkit moz ms o) {
+      @if $vendors {
+        @each $vendor in $vendors {
+          #{"-" + $vendor + "-" + $property}: #{$value};
+        }
+      }
+      #{$property}: #{$value};
+}
 
+
+// TYPOGRAPHY
 /* USAGE: @include font-size(16/10); */
 @mixin font-size($sizeValue: 16/10) {
   font-size: ($sizeValue * 10) + px;
@@ -77,4 +93,13 @@ STYLESHEET: STYLE
 }
 @mixin fontsize-30 {
   @include font-size(30/10);
+}
+@mixin fontsize-32 {
+  @include font-size(32/10);
+}
+@mixin fontsize-34 {
+  @include font-size(34/10);
+}
+@mixin fontsize-36 {
+  @include font-size(36/10);
 }

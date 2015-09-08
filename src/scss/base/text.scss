@@ -13,14 +13,40 @@ h6 {
 }
 
 h1 {
-    text-transform: uppercase;
-    margin-top: $m-small;
+    margin-top: -2em;
     margin-bottom: $m-medium;
+    @include fontsize-24;
+}
+
+@include medium {
+    h1 {
+        @include fontsize-30;
+    }
+}
+
+@include large {
+    h1 {
+        @include fontsize-36;
+    }
 }
 
 h2 {
-
+    @include fontsize-24;
+    margin-bottom: $m-medium;
 }
+
+@include medium {
+    h2 {
+        @include fontsize-30;
+    }
+}
+
+@include large {
+    h2 {
+        @include fontsize-36;
+    }
+}
+
 
 h3 {
 
@@ -40,5 +66,54 @@ h6 {
 
 p {
     margin-top: $m-small;
-    margin-bottom: $m-medium;
+    margin-bottom: $m-large;
+}
+
+.text {
+    @include fontsize-10;
+
+    &--light {
+        color: $c-light;
+    }
+
+    &--center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &--wrapper {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@include small {
+    .text {
+
+        &--wrapped {
+            padding-left: 0;
+            padding-right: 0;
+            max-width: 400px;
+        }
+    }
+}
+
+@include medium {
+    .text {
+        @include fontsize-11;
+
+        &--wrapped {
+            max-width: 450px;
+        }
+    }
+}
+
+@include large {
+    .text {
+
+        &--wrapped {
+            max-width: 550px;
+            @include fontsize-14;
+        }
+    }
 }

@@ -1,0 +1,67 @@
+/******************************************************************
+STYLESHEET: HEADING
+
+******************************************************************/
+
+.heading {
+    font-weight: 400;
+
+    &-section {
+        background-color: $red;
+        color: $black;
+        margin: 0;
+        padding-top: $m-small;
+        padding-bottom: $m-small;
+    }
+
+    &--high {
+        display: block;
+        color: $red;
+    }
+
+    &--low {
+        font-family: $f-base;
+    }
+
+    &--centered {
+        position: absolute;
+        top: 25%;
+        width: 100%;
+    }
+}
+
+@include small {
+    .heading {
+        position: relative;
+        z-index: 20;
+
+        &-section {
+            position: absolute;
+        }
+
+        &--left {
+            left: 0;
+            padding-left: 10%;
+            padding-right: $m-medium;
+        }
+
+        &--right {
+            right: 0;
+            padding-right: 10%;
+            padding-left: $m-medium;
+        }
+    }
+}
+
+@include medium {
+    .heading {
+
+        &--left {
+            padding-left: 15%;
+        }
+
+        &--right {
+            padding-right: 15%;
+        }
+    }
+}

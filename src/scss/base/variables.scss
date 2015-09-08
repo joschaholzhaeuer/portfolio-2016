@@ -10,31 +10,34 @@ This is the place for all variables.
 ******************************************************************/
 
 // COLORS
-$white:  #fff;
-$black:  #000;
-$grey:   #e1e2e5;
+$white:      #fff;
+$black:      #20242b;
+$grey-dark:  #282d36;
+$grey-light: #8d99ad;
+$red:        #d75056;
+$red-light:  #f46b6b;
 
 $c-dark:   $black;
-$c-medium: $grey;
-$c-light:  $white;
+$c-medium: $grey-dark;
+$c-light:  $grey-light;
 
-$c-base: $black;
+$c-base: $white;
 
 
 // FONTS
-$merriweathersans: 'Merriweather Sans', 'Helvetica', 'Arial', 'sans-serif';
-$merriweather:     'Merriweather', 'Helvetica', 'Arial', 'sans-serif';
+$open-sans: 'Open Sans', 'Helvetica', 'Arial', 'sans-serif';
+$lobster: 'Lobster', 'Helvetica', 'Arial', 'sans-serif';
 
-$f-base:    $merriweather;
-$f-heading: $merriweathersans;
-$f-link:    $merriweathersans;
-$f-text:    $merriweather;
+$f-base:    $open-sans;
+$f-heading: $lobster;
+$f-link:    $open-sans;
+$f-text:    $open-sans;
 
 
 // BREAKPOINTS
-$w-small:  681px;
-$w-medium: 961px;
-$w-large:  1361px;
+$w-small:  730px;
+$w-medium: 1080px;
+$w-large:  1320px;
 
 
 // MARGINS/PADDINGS
