@@ -1,0 +1,106 @@
+/******************************************************************
+STYLESHEET: FOOTER
+
+******************************************************************/
+
+.footer {
+    background-color: $red;
+    padding-top: $m-large;
+    padding-bottom: $m-medium;
+    color: $red-light;
+    font-weight: 700;
+
+    &-text {
+        margin-bottom: 0;
+    }
+
+    &-logo {
+        display: block;
+        margin: 0 auto;
+        width: 50px;
+        height: 50px;
+        margin-bottom: $m-small;
+    }
+
+    &-link {
+        color: $red-light;
+        text-decoration: none;
+
+        &:visited {
+            color: $red-light;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $white;
+        }
+    }
+}
+
+@include small {
+    .footer {
+        background-color: transparent;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 244px solid transparent;
+            border-right: 244px solid transparent;
+            border-bottom: 244px solid $red;
+            position: absolute;
+            bottom: 0;
+            z-index: -10;
+            left: 50%;
+            margin-left: -244px;
+        }
+
+        &-logo {
+            position: absolute;
+            left: 50%;
+            margin-left: -25px;
+            top: -($m-medium);
+        }
+    }
+}
+
+@include medium {
+    .footer {
+
+        &::after {
+            border-left: 300px solid transparent;
+            border-right: 300px solid transparent;
+            border-bottom: 300px solid $red;
+            margin-left: -300px;
+        }
+
+        &-logo {
+            width: 70px;
+            height: 70px;
+            margin-left: -35px;
+            top: -($m-large);
+        }
+    }
+}
+
+@include large {
+    .footer {
+
+        &::after {
+            border-left: 400px solid transparent;
+            border-right: 400px solid transparent;
+            border-bottom: 400px solid $red;
+            margin-left: -400px;
+        }
+
+        &-logo {
+            width: 90px;
+            height: 90px;
+            margin-left: -45px;
+            top: -5em;
+        }
+    }
+}

@@ -5,4 +5,25 @@ STYLESHEET: GRID
 
 .section {
     text-align: center;
+    position: relative;
+    z-index: 15;
+}
+
+@include small {
+    .section {
+
+        &-projects {
+            margin-top: 100px;
+            margin-bottom: 200px;
+        }
+    }
+}
+
+@include large {
+    .section {
+
+        &-projects {
+            margin-bottom: 500px;
+        }
+    }
 }

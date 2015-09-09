@@ -21,12 +21,29 @@ STYLESHEET: HEADING
 
     &--low {
         font-family: $f-base;
+        @include fontsize-16;
+        margin-bottom: 0;
+        margin-top: $m-small;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+
+    &--sub {
+        @include fontsize-10;
+        margin-bottom: $m-medium;
+        opacity: 0;
     }
 
     &--centered {
         position: absolute;
-        top: 25%;
+        top: 35%;
         width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    &--bold {
+        font-weight: 700;
     }
 }
 
@@ -50,11 +67,29 @@ STYLESHEET: HEADING
             padding-right: 10%;
             padding-left: $m-medium;
         }
+
+        &--centered {
+            top: 50%;
+            margin-top: -42px;
+            @include prefix( transform, rotate(-45deg) );
+        }
+
+        &--low {
+            @include fontsize-14;
+        }
+
+        &--sub {
+            @include fontsize-9;
+        }
     }
 }
 
 @include medium {
     .heading {
+
+        &--low {
+            @include fontsize-18;
+        }
 
         &--left {
             padding-left: 15%;
@@ -62,6 +97,19 @@ STYLESHEET: HEADING
 
         &--right {
             padding-right: 15%;
+        }
+    }
+}
+
+@include large {
+    .heading {
+
+        &--low {
+            @include fontsize-20;
+        }
+
+        &--sub {
+            @include fontsize-12;
         }
     }
 }

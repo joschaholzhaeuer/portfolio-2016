@@ -17,6 +17,39 @@ STYLESHEET: DIAMOND
 
   &-img {
     width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    background-color: $red;
+
+    &:hover {
+
+        h2 {
+        }
+
+        p {
+            opacity: 1;
+        }
+
+        img {
+            opacity: 1;
+        }
+    }
+
+    &--reverse {
+        width: 100%;
+        opacity: 0.7;
+        @include prefix( transition, opacity 0.1s ease-in );
+    }
+  }
+
+  &-grid {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    &-item {
+        position: relative;
+    }
   }
 }
 
@@ -33,6 +66,60 @@ STYLESHEET: DIAMOND
             z-index: -10;
             left: 50%;
             top: 120px;
+        }
+
+        &-grid {
+            width: 700px;
+            height: 700px;
+            margin: 100px auto;
+            position: relative;
+            padding-top: 100px;
+
+            &-item {
+                list-style: none;
+            }
+        }
+
+        &-img {
+            width: 244px;
+            height: 244px;
+            display: block;
+            position: absolute;
+            text-decoration: none;
+            @include prefix( transform, rotate(45deg) );
+            max-height: 1000px;
+
+            &--reverse {
+                @include prefix( transform, rotate(-45deg) );
+                width: 400px;
+                height: 400px;
+                position: absolute;
+                top: 50%;
+                margin-top: -200px;
+                left: 50%;
+                margin-left: -200px;
+            }
+
+            &--first {
+                left: 50%;
+                margin-left: -122px;
+            }
+
+            &--second {
+                top: 177px;
+                left: 51px;
+            }
+
+            &--third {
+                top: 177px;
+                right: 51px;
+            }
+
+            &--fourth {
+                left: 50%;
+                margin-left: -122px;
+                top: 355px;
+            }
         }
 
         &--light {
@@ -99,6 +186,16 @@ STYLESHEET: DIAMOND
                 border-right: 250px solid $c-medium;
                 right: 0;
             }
+
+            &--bottom {
+                width: 500px;
+                height: 500px;
+                @include prefix( transform, rotate(45deg) );
+                background-color: $c-medium;
+                left: 50%;
+                margin-left: -250px;
+                top: 730px;
+            }
         }
     }
 }
@@ -121,6 +218,46 @@ STYLESHEET: DIAMOND
             }
         }
 
+        &-grid {
+            padding-top: 200px;
+            height: 1000px;
+        }
+
+        &-img {
+            width: 280px;
+            height: 280px;
+
+            &--reverse {
+                width: 600px;
+                height: 600px;
+                margin-top: -300px;
+                margin-left: -300px;
+            }
+
+            &--first {
+                margin-left: -140px;
+            }
+
+            &--second {
+                width: 360px;
+                height: 360px;
+                top: 165px;
+                left: -91px;
+            }
+
+            &--third {
+                width: 360px;
+                height: 360px;
+                top: 165px;
+                right: -91px;
+            }
+
+            &--fourth {
+                margin-left: -140px;
+                top: 410px;
+            }
+        }
+
         &-arrow {
             top: 54px;
             border-left: 70px solid transparent;
@@ -139,6 +276,13 @@ STYLESHEET: DIAMOND
 
         &-bg {
             top: 230px;
+
+            &--bottom {
+                width: 600px;
+                height: 600px;
+                margin-left: -300px;
+                top: 900px;
+            }
         }
     }
 }
@@ -158,6 +302,46 @@ STYLESHEET: DIAMOND
                 width: 800px;
                 height: 800px;
                 margin-left: -400px;
+            }
+        }
+
+        &-grid {
+            padding-top: 300px;
+            height: 1200px;
+        }
+
+        &-img {
+            width: 360px;
+            height: 360px;
+
+            &--reverse {
+                width: 800px;
+                height: 800px;
+                margin-top: -400px;
+                margin-left: -400px;
+            }
+
+            &--first {
+                margin-left: -180px;
+            }
+
+            &--second {
+                width: 420px;
+                height: 420px;
+                top: 235px;
+                left: -167px;
+            }
+
+            &--third {
+                width: 420px;
+                height: 420px;
+                top: 235px;
+                right: -167px;
+            }
+
+            &--fourth {
+                margin-left: -180px;
+                top: 530px;
             }
         }
 
@@ -190,6 +374,13 @@ STYLESHEET: DIAMOND
                 border-top: 550px solid transparent;
                 border-bottom: 550px solid transparent;
                 border-right: 550px solid $c-medium;
+            }
+
+            &--bottom {
+                width: 800px;
+                height: 800px;
+                margin-left: -400px;
+                top: 1140px;
             }
         }
     }
