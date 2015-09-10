@@ -21,24 +21,9 @@ STYLESHEET: DIAMOND
     overflow: hidden;
     background-color: $red;
 
-    &:hover {
-
-        h2 {
-        }
-
-        p {
-            opacity: 1;
-        }
-
-        img {
-            opacity: 1;
-        }
-    }
-
     &--reverse {
         width: 100%;
-        opacity: 0.7;
-        @include prefix( transition, opacity 0.1s ease-in );
+        opacity: 0.1;
     }
   }
 
@@ -91,13 +76,13 @@ STYLESHEET: DIAMOND
 
             &--reverse {
                 @include prefix( transform, rotate(-45deg) );
-                width: 400px;
-                height: 400px;
+                width: 350px;
+                height: 350px;
                 position: absolute;
                 top: 50%;
-                margin-top: -200px;
+                margin-top: -175px;
                 left: 50%;
-                margin-left: -200px;
+                margin-left: -175px;
             }
 
             &--first {
@@ -228,10 +213,10 @@ STYLESHEET: DIAMOND
             height: 280px;
 
             &--reverse {
-                width: 600px;
-                height: 600px;
-                margin-top: -300px;
-                margin-left: -300px;
+                width: 520px;
+                height: 520px;
+                margin-top: -260px;
+                margin-left: -260px;
             }
 
             &--first {
@@ -315,10 +300,10 @@ STYLESHEET: DIAMOND
             height: 360px;
 
             &--reverse {
-                width: 800px;
-                height: 800px;
-                margin-top: -400px;
-                margin-left: -400px;
+                width: 600px;
+                height: 600px;
+                margin-top: -300px;
+                margin-left: -300px;
             }
 
             &--first {

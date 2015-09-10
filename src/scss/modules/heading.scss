@@ -21,17 +21,19 @@ STYLESHEET: HEADING
 
     &--low {
         font-family: $f-base;
-        @include fontsize-16;
         margin-bottom: 0;
         margin-top: $m-small;
         text-transform: uppercase;
-        letter-spacing: 0.1em;
+        //letter-spacing: 0.1em;
+        font-weight: 700;
+        //opacity: 0;
+        @include fontsize-14;
     }
 
     &--sub {
         @include fontsize-10;
         margin-bottom: $m-medium;
-        opacity: 0;
+        //opacity: 0;
     }
 
     &--centered {
@@ -43,7 +45,7 @@ STYLESHEET: HEADING
     }
 
     &--bold {
-        font-weight: 700;
+        //font-weight: 700;
     }
 }
 
@@ -69,13 +71,15 @@ STYLESHEET: HEADING
         }
 
         &--centered {
-            top: 50%;
-            margin-top: -42px;
+            width: 100%;
+            height: 100%;
+            top: 17%;
+            left: 17%;
             @include prefix( transform, rotate(-45deg) );
         }
 
         &--low {
-            @include fontsize-14;
+            //@include fontsize-14;
         }
 
         &--sub {
@@ -87,8 +91,13 @@ STYLESHEET: HEADING
 @include medium {
     .heading {
 
+        &--centered {
+            top: 20%;
+            left: 20%;
+        }
+
         &--low {
-            @include fontsize-18;
+            //@include fontsize-18;
         }
 
         &--left {
@@ -105,7 +114,7 @@ STYLESHEET: HEADING
     .heading {
 
         &--low {
-            @include fontsize-20;
+            //@include fontsize-20;
         }
 
         &--sub {
