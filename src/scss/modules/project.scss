@@ -1,0 +1,127 @@
+/******************************************************************
+STYLESHEET: PROJECT
+
+******************************************************************/
+
+.project {
+
+    &-grid {
+        padding: 40px 0 0 0;
+        margin: 0 5% 0 5%;
+
+        &-item {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            padding: 40px;
+            background-color: $c-medium;
+            border-radius: 25px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &-img {
+        width: 100%;
+        height: auto;
+
+
+        &-frame {
+            overflow: hidden;
+            position: relative;
+        }
+    }
+
+    &-heading {
+        position: absolute;
+        width: 100%;
+        background-color: $red;
+        top: 25%;
+
+        &-main {
+            margin: $m-small auto;
+            font-family: $f-base;
+            letter-spacing: 0.2em;
+            @include fontsize-10;
+        }
+
+        &-sub {
+            display: none;
+        }
+    }
+}
+
+@include small {
+    .project {
+
+        &-img {
+
+            &-frame {
+                height: 400px;
+            }
+        }
+
+        &-grid {
+            padding-top: 160px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 707px;
+
+            &-item {
+                margin-bottom: 80px;
+            }
+        }
+
+        &-heading {
+            width: auto;
+            padding: $m-small $m-large $m-small 10%;
+        }
+    }
+}
+
+@include medium {
+    .project {
+
+        &-img {
+
+            &-frame {
+                height: 500px;
+            }
+        }
+
+        &-grid {
+            padding-top: 200px;
+            max-width: 849px;
+        }
+
+        &-heading {
+
+            &-main {
+                @include fontsize-12;
+            }
+        }
+    }
+}
+
+@include large {
+    .project {
+
+        &-img {
+
+            &-frame {
+                height: 600px;
+            }
+        }
+
+        &-grid {
+            padding-top: 300px;
+            max-width: 1132px;
+        }
+
+        &-heading {
+
+            &-main {
+                @include fontsize-16;
+            }
+        }
+    }
+}

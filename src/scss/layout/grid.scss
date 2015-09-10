@@ -13,8 +13,16 @@ STYLESHEET: GRID
     .section {
 
         &-projects {
-            margin-top: 100px;
             margin-bottom: 200px;
+        }
+    }
+}
+
+@include medium {
+    .section {
+
+        &-projects {
+            margin-bottom: 300px;
         }
     }
 }

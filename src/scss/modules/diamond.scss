@@ -14,34 +14,12 @@ STYLESHEET: DIAMOND
     background-color: $c-base;
     padding: $m-medium 5% $m-medium 5%;
   }
-
-  &-img {
-    width: 100%;
-    max-height: 400px;
-    overflow: hidden;
-    background-color: $red;
-
-    &--reverse {
-        width: 100%;
-        opacity: 0.1;
-    }
-  }
-
-  &-grid {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-
-    &-item {
-        position: relative;
-    }
-  }
 }
 
 @include small {
     .diamond {
         padding-top: 130px;
-        padding-bottom: 180px;
+        padding-bottom: 70px;
 
          &::after {
             content: "";
@@ -51,60 +29,6 @@ STYLESHEET: DIAMOND
             z-index: -10;
             left: 50%;
             top: 120px;
-        }
-
-        &-grid {
-            width: 700px;
-            height: 700px;
-            margin: 100px auto;
-            position: relative;
-            padding-top: 100px;
-
-            &-item {
-                list-style: none;
-            }
-        }
-
-        &-img {
-            width: 244px;
-            height: 244px;
-            display: block;
-            position: absolute;
-            text-decoration: none;
-            @include prefix( transform, rotate(45deg) );
-            max-height: 1000px;
-
-            &--reverse {
-                @include prefix( transform, rotate(-45deg) );
-                width: 350px;
-                height: 350px;
-                position: absolute;
-                top: 50%;
-                margin-top: -175px;
-                left: 50%;
-                margin-left: -175px;
-            }
-
-            &--first {
-                left: 50%;
-                margin-left: -122px;
-            }
-
-            &--second {
-                top: 177px;
-                left: 51px;
-            }
-
-            &--third {
-                top: 177px;
-                right: 51px;
-            }
-
-            &--fourth {
-                left: 50%;
-                margin-left: -122px;
-                top: 355px;
-            }
         }
 
         &--light {
@@ -188,7 +112,7 @@ STYLESHEET: DIAMOND
 @include medium {
     .diamond {
         padding-top: 200px;
-        padding-bottom: 200px;
+        padding-bottom: 120px;
 
         &::after {
             top: 180px;
@@ -200,46 +124,6 @@ STYLESHEET: DIAMOND
                 width: 600px;
                 height: 600px;
                 margin-left: -300px;
-            }
-        }
-
-        &-grid {
-            padding-top: 200px;
-            height: 1000px;
-        }
-
-        &-img {
-            width: 280px;
-            height: 280px;
-
-            &--reverse {
-                width: 520px;
-                height: 520px;
-                margin-top: -260px;
-                margin-left: -260px;
-            }
-
-            &--first {
-                margin-left: -140px;
-            }
-
-            &--second {
-                width: 360px;
-                height: 360px;
-                top: 165px;
-                left: -91px;
-            }
-
-            &--third {
-                width: 360px;
-                height: 360px;
-                top: 165px;
-                right: -91px;
-            }
-
-            &--fourth {
-                margin-left: -140px;
-                top: 410px;
             }
         }
 
@@ -287,46 +171,6 @@ STYLESHEET: DIAMOND
                 width: 800px;
                 height: 800px;
                 margin-left: -400px;
-            }
-        }
-
-        &-grid {
-            padding-top: 300px;
-            height: 1200px;
-        }
-
-        &-img {
-            width: 360px;
-            height: 360px;
-
-            &--reverse {
-                width: 600px;
-                height: 600px;
-                margin-top: -300px;
-                margin-left: -300px;
-            }
-
-            &--first {
-                margin-left: -180px;
-            }
-
-            &--second {
-                width: 420px;
-                height: 420px;
-                top: 235px;
-                left: -167px;
-            }
-
-            &--third {
-                width: 420px;
-                height: 420px;
-                top: 235px;
-                right: -167px;
-            }
-
-            &--fourth {
-                margin-left: -180px;
-                top: 530px;
             }
         }
 

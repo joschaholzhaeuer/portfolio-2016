@@ -4,21 +4,38 @@ STYLESHEET: FOOTER
 ******************************************************************/
 
 .footer {
-    background-color: $red;
     padding-top: $m-large;
     padding-bottom: $m-medium;
     color: $red-light;
     font-weight: 700;
+    position: relative;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: 150px solid transparent;
+        border-right: 150px solid transparent;
+        border-bottom: 150px solid $red;
+        position: absolute;
+        bottom: 0;
+        z-index: -10;
+        left: 50%;
+        margin-left: -150px;
+    }
 
     &-text {
+        font-weight: 300;
+        @include fontsize-8;
         margin-bottom: 0;
     }
 
     &-logo {
         display: block;
         margin: 0 auto;
-        width: 50px;
-        height: 50px;
+        width: 30px;
+        height: 30px;
         margin-bottom: $m-small;
     }
 
@@ -40,29 +57,25 @@ STYLESHEET: FOOTER
 
 @include small {
     .footer {
-        background-color: transparent;
-        position: relative;
 
         &::after {
-            content: "";
-            display: block;
-            width: 0;
-            height: 0;
             border-left: 244px solid transparent;
             border-right: 244px solid transparent;
             border-bottom: 244px solid $red;
-            position: absolute;
-            bottom: 0;
-            z-index: -10;
-            left: 50%;
             margin-left: -244px;
         }
 
         &-logo {
             position: absolute;
             left: 50%;
+            width: 50px;
+            height: 50px;
             margin-left: -25px;
             top: -($m-medium);
+        }
+
+        &-text {
+            @include fontsize-10;
         }
     }
 }
@@ -83,6 +96,10 @@ STYLESHEET: FOOTER
             margin-left: -35px;
             top: -($m-large);
         }
+
+        &-link {
+            @include fontsize-12;
+        }
     }
 }
 
@@ -101,6 +118,11 @@ STYLESHEET: FOOTER
             height: 90px;
             margin-left: -45px;
             top: -5em;
+        }
+
+        &-link {
+            display: block;
+            margin-bottom: $m-medium;
         }
     }
 }
