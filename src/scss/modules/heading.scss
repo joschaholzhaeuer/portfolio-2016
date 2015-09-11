@@ -6,7 +6,7 @@ STYLESHEET: HEADING
 .heading {
     font-weight: 400;
 
-    &-section {
+    &-label {
         background-color: $red;
         color: $black;
         margin: 0;
@@ -25,7 +25,7 @@ STYLESHEET: HEADING
         position: relative;
         z-index: 20;
 
-        &-section {
+        &-label {
             position: absolute;
         }
 
