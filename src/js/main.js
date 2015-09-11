@@ -5,16 +5,29 @@ JAVASCRIPT: MAIN.JS
 
 $(document).ready(function($) {
 
-    $('.diamond-img').mouseenter( function() {
-        //$(this).children('img').fadeTo( 'fast', 0.2 );
-        //$(this).find('h2').fadeTo( 'fast', 1 );
-        //$(this).find('p').fadeTo( 'fast', 1 );
+    var $backToTop = $('.cd-top'),
+        offset = ( $('.project-grid').offset().top ) + 100;
+
+    $(window).on('scroll', function() {
+        backToTop();
     });
 
-    $('.diamond-img').mouseleave( function() {
-        //$(this).children('img').fadeTo( 'fast', 1 );
-        //$(this).find('h2').fadeTo( 'fast', 0 );
-        //$(this).find('p').fadeTo( 'fast', 0 );
+    function backToTop() {
+        if ( $(this).scrollTop() > offset ) {
+            $backToTop.removeClass('is-invisible');
+
+        } else {
+            $backToTop.addClass('is-invisible');
+        }
+    }
+
+    //smooth scroll to top
+    $backToTop.on('click', function(event){
+        event.preventDefault();
+        $('body,html').animate({
+            scrollTop: 0 ,
+            }, 600
+        );
     });
 
 });

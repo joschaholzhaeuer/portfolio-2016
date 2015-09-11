@@ -20,8 +20,14 @@ STYLESHEET: PROJECT
         }
     }
 
-    &-img {
+    &-detailimg {
         width: 100%;
+        height: auto;
+    }
+
+    &-img {
+        width: 150%;
+        margin-left: -25%;
         height: auto;
         @include prefix( transition, opacity 0.2s ease-in-out );
 
@@ -57,6 +63,27 @@ STYLESHEET: PROJECT
         z-index: 10;
         opacity: 0;
         visibility: hidden;
+        fill: $c-dark;
+
+        &-home {
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            @include prefix( transform, rotate(180deg) );
+            top: 1.7em;
+            left: 5%;
+            fill: $c-dark;
+            @include prefix( transition, fill 0.1s ease-in-out );
+        }
+    }
+
+    &-back {
+        &:hover {
+
+            .project-arrow-home {
+                fill: $white;
+            }
+        }
     }
 
     &-link {
@@ -109,6 +136,8 @@ STYLESHEET: PROJECT
     .project {
 
         &-img {
+            width: 100%;
+            margin-left: 0;
 
             &-frame {
                 height: 400px;
@@ -150,6 +179,10 @@ STYLESHEET: PROJECT
                 padding: 40px;
                 margin-bottom: 80px;
             }
+
+            &-detail {
+                padding-top: 100px;
+            }
         }
 
         &-heading {
@@ -163,6 +196,46 @@ STYLESHEET: PROJECT
             &-sub {
                 bottom: $m-large;
                 padding-right: 5%;
+            }
+        }
+
+        &-arrow {
+
+            &-home {
+                top: 16.8em;
+                left: 10%;
+                z-index: 20;
+                margin-left: -1em;
+            }
+        }
+
+        &-back {
+
+            &::after {
+                content: "";
+                display: table;
+                width: 60px;
+                height: 60px;
+                background-color: $red;
+                @include prefix( transform, rotate(45deg) );
+                position: absolute;
+                z-index: 5;
+                top: 16em;
+                left: 10%;
+                margin-left: -30px;
+                @include prefix( transition, all 0.1s ease-in-out );
+            }
+
+            &:hover {
+
+                .project-arrow-home {
+                    fill: $red;
+                }
+
+                &::after {
+                    background-color: $c-dark;
+                    box-shadow: 0 0 0 3px $red;
+                }
             }
         }
     }
@@ -181,6 +254,10 @@ STYLESHEET: PROJECT
         &-grid {
             padding-top: 200px;
             max-width: 849px;
+
+            &-detail {
+                padding-top: 140px;
+            }
         }
 
         &-heading {
@@ -196,6 +273,28 @@ STYLESHEET: PROJECT
                 bottom: $m-large;
                 padding-right: 5%;
                 padding-left: $m-large;
+            }
+        }
+
+        &-arrow {
+
+            &-home {
+                width: 50px;
+                height: 50px;
+                top: 22.6em;
+                left: 15%;
+                z-index: 20;
+                margin-left: -0.5em;
+            }
+        }
+
+        &-back {
+
+            &::after {
+                width: 100px;
+                height: 100px;
+                top: 21em;
+                left: 15%;
             }
         }
     }
@@ -214,6 +313,28 @@ STYLESHEET: PROJECT
         &-grid {
             padding-top: 300px;
             max-width: 1132px;
+
+            &-detail {
+                padding-top: 180px;
+            }
+        }
+
+        &-arrow {
+
+            &-home {
+                top: 26.6em;
+                left: 15%;
+                z-index: 20;
+                margin-left: -0.5em;
+            }
+        }
+
+        &-back {
+
+            &::after {
+                top: 25em;
+                left: 15%;
+            }
         }
     }
 }
