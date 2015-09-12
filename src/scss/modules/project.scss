@@ -28,6 +28,13 @@ STYLESHEET: PROJECT
 
         &-detail {
             margin-top: $m-large;
+            margin-left: 0;
+            margin-right: 0;
+
+            &-item {
+                margin-left: 5%;
+                margin-right: 5%;
+            }
         }
     }
 
@@ -149,6 +156,24 @@ STYLESHEET: PROJECT
             right: 0;
         }
     }
+
+    &-details {
+        width: 100%;
+
+        &-heading {
+            font-weight: 400;
+            color: $c-light;
+            @include fontsize-18;
+            background-color: $c-medium;
+            padding: $m-small $m-medium;
+        }
+
+        &-text {
+            color: $c-light;
+            background-color: $c-medium;
+            padding: $m-medium $m-large;
+        }
+    }
 }
 
 @include small {
@@ -261,6 +286,26 @@ STYLESHEET: PROJECT
                 }
             }
         }
+
+        &-details {
+            max-width: none;
+            display: table;
+            margin-bottom: $m-large;
+
+            &-heading {
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            &-text {
+                display: table-cell;
+                vertical-align: middle;
+                border-left: $m-medium solid $c-dark;
+                width: 50%;
+                text-align: left;
+                padding-right: 5%;
+            }
+        }
     }
 }
 
@@ -274,6 +319,13 @@ STYLESHEET: PROJECT
 
             &-detail {
                 padding-top: 140px;
+                margin-left: 0;
+                margin-right: 0;
+
+                &-item {
+                    margin-left: 10%;
+                    margin-right: 10%;
+                }
             }
 
             &-item {
@@ -324,6 +376,21 @@ STYLESHEET: PROJECT
                 left: 15%;
             }
         }
+
+        &-details {
+
+            &-heading {
+                @include fontsize-24;
+                border-right: $m-small solid $c-dark;
+            }
+
+            &-text {
+                @include fontsize-11;
+                border-left: 0;
+                width: 70%;
+                padding-right: 10%;
+            }
+        }
     }
 }
 
@@ -338,6 +405,15 @@ STYLESHEET: PROJECT
 
             &-detail {
                 padding-top: 180px;
+                margin-left: 0;
+                margin-right: 0;
+                max-width: none;
+
+                &-item {
+                    margin-left: auto;
+                    margin-right: auto;
+                    max-width: 1200px;
+                }
             }
 
             &-item {
@@ -371,6 +447,17 @@ STYLESHEET: PROJECT
             &::after {
                 top: 31em;
                 left: 15%;
+            }
+        }
+
+        &-details {
+
+            &-heading {
+                @include fontsize-24;
+            }
+
+            &-text {
+                @include fontsize-14;
             }
         }
     }

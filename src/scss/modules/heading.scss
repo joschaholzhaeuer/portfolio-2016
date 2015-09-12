@@ -35,10 +35,11 @@ STYLESHEET: HEADING
         text-decoration: none;
         font-weight: 800;
         display: inline-block;
-        margin-top: $m-medium;
+        margin-top: 2em;
         color: $red;
         border: 3px solid $red;
         padding: $m-small $m-medium;
+        @include prefix( transition, all 0.1s ease-in-out );
 
         &:hover {
             background-color: $red;
@@ -64,7 +65,7 @@ STYLESHEET: HEADING
         &-detailwrapper {
             float: right;
             margin-top: 10em;
-            padding-right: 10%;
+            padding-right: 5%;
             padding-left: $m-large;
             width: 80%;
         }
@@ -83,7 +84,8 @@ STYLESHEET: HEADING
 
         &--detail {
             top: $m-medium;
-            padding-left: 30%;
+            text-align: right;
+            width: 50%;
         }
     }
 }
@@ -101,7 +103,7 @@ STYLESHEET: HEADING
 
         &-detailwrapper {
             margin-top: 16em;
-            padding-right: 15%;
+            padding-right: 10%;
             padding-left: $m-large;
             width: 70%;
         }
@@ -124,7 +126,7 @@ STYLESHEET: HEADING
             width: 70%;
 
             & .text {
-                max-width: 850px;
+                max-width: 900px;
             }
         }
 
@@ -138,7 +140,7 @@ STYLESHEET: HEADING
         }
 
         &-detaillink {
-            @include fontsize-14;
+            @include fontsize-12;
         }
     }
 }
