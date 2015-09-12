@@ -12,6 +12,14 @@ STYLESHEET: VISIBILITY
     visibility: hidden;
 }
 
+.element-fade {
+    opacity: 0;
+
+    &-now {
+        opacity: 0;
+    }
+}
+
 .is-visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);

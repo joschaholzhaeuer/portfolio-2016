@@ -7,7 +7,7 @@ STYLESHEET: FOOTER
     padding-top: $m-large;
     padding-bottom: $m-medium;
     color: $red-light;
-    font-weight: 700;
+    font-weight: 800;
     position: relative;
 
     &::after {
@@ -121,7 +121,7 @@ STYLESHEET: FOOTER
         }
 
         &-link {
-            display: block;
+            display: inline-block;
             margin-bottom: $m-medium;
         }
     }

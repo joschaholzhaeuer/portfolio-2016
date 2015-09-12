@@ -17,12 +17,18 @@ STYLESHEET: PROJECT
             background-color: $c-medium;
             border-radius: 25px;
             margin-bottom: 40px;
-        }
-    }
 
-    &-detailimg {
-        width: 100%;
-        height: auto;
+            &--mobile {
+                padding: 20px 10px 40px;
+                max-width: 260px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        &-detail {
+            margin-top: $m-large;
+        }
     }
 
     &-img {
@@ -30,12 +36,14 @@ STYLESHEET: PROJECT
         margin-left: -25%;
         height: auto;
         @include prefix( transition, opacity 0.2s ease-in-out );
+        @include prefix( transform, translate3d( 0, 0, 0 ) );
 
 
         &-frame {
             overflow: hidden;
             position: relative;
-            height: 240px;
+            height: auto;
+            max-height: 300px;
 
             &:hover {
 
@@ -49,6 +57,16 @@ STYLESHEET: PROJECT
                     @include prefix( transition, opacity 0.2s ease-in-out );
                 }
             }
+        }
+    }
+
+    &-detailimg {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+
+        &-frame {
+            max-height: none;
         }
     }
 
@@ -123,7 +141,8 @@ STYLESHEET: PROJECT
             position: absolute;
             display: inline-block;
             background-color: $c-base;
-            color: $c-medium;
+            font-weight: 800;
+            color: $c-light;
             margin: 0;
             padding: $m-medium $m-small $m-medium $m-medium;
             bottom: 2.5em;
@@ -140,7 +159,7 @@ STYLESHEET: PROJECT
             margin-left: 0;
 
             &-frame {
-                height: 400px;
+                max-height: none;
 
                 &:hover {
 
@@ -171,13 +190,15 @@ STYLESHEET: PROJECT
 
         &-grid {
             padding-top: 160px;
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 707px;
 
             &-item {
-                padding: 40px;
+                padding: 40px 30px;
                 margin-bottom: 80px;
+
+                &--mobile {
+                    max-width: 320px;
+                    padding: 40px 10px 60px;
+                }
             }
 
             &-detail {
@@ -202,10 +223,12 @@ STYLESHEET: PROJECT
         &-arrow {
 
             &-home {
-                top: 16.8em;
+                top: 19.95em;
                 left: 10%;
                 z-index: 20;
                 margin-left: -1em;
+                width: 25px;
+                height: 25px;
             }
         }
 
@@ -214,13 +237,13 @@ STYLESHEET: PROJECT
             &::after {
                 content: "";
                 display: table;
-                width: 60px;
-                height: 60px;
+                width: 55px;
+                height: 55px;
                 background-color: $red;
                 @include prefix( transform, rotate(45deg) );
                 position: absolute;
                 z-index: 5;
-                top: 16em;
+                top: 19em;
                 left: 10%;
                 margin-left: -30px;
                 @include prefix( transition, all 0.1s ease-in-out );
@@ -244,35 +267,39 @@ STYLESHEET: PROJECT
 @include medium {
     .project {
 
-        &-img {
-
-            &-frame {
-                height: 500px;
-            }
-        }
-
         &-grid {
-            padding-top: 200px;
-            max-width: 849px;
+            padding-top: 220px;
+            margin-left: 10%;
+            margin-right: 10%;
 
             &-detail {
                 padding-top: 140px;
+            }
+
+            &-item {
+                padding: 60px 40px;
+                margin-bottom: 150px;
+
+                &--mobile {
+                    max-width: 380px;
+                    padding: 40px 10px 60px;
+                }
             }
         }
 
         &-heading {
 
             &-main {
-                @include fontsize-24;
-                top: 1.5em;
-                padding-left: 5%;
+                @include fontsize-28;
+                top: 1em;
+                padding-left: 10%;
             }
 
             &-sub {
                 top: auto;
                 bottom: $m-large;
-                padding-right: 5%;
-                padding-left: $m-large;
+                padding-right: 10%;
+                padding-left: 2em;
             }
         }
 
@@ -281,7 +308,7 @@ STYLESHEET: PROJECT
             &-home {
                 width: 50px;
                 height: 50px;
-                top: 22.6em;
+                top: 25.6em;
                 left: 15%;
                 z-index: 20;
                 margin-left: -0.5em;
@@ -293,7 +320,7 @@ STYLESHEET: PROJECT
             &::after {
                 width: 100px;
                 height: 100px;
-                top: 21em;
+                top: 24em;
                 left: 15%;
             }
         }
@@ -303,36 +330,46 @@ STYLESHEET: PROJECT
 @include large {
     .project {
 
-        &-img {
-
-            &-frame {
-                height: 600px;
-            }
-        }
-
         &-grid {
             padding-top: 300px;
-            max-width: 1132px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1200px;
 
             &-detail {
                 padding-top: 180px;
+            }
+
+            &-item {
+                margin-bottom: 200px;
             }
         }
 
         &-arrow {
 
             &-home {
-                top: 26.6em;
+                top: 32.6em;
                 left: 15%;
                 z-index: 20;
                 margin-left: -0.5em;
             }
         }
 
+        &-heading {
+
+            &-main {
+                @include fontsize-32;
+            }
+
+            &-sub {
+                @include fontsize-14;
+            }
+        }
+
         &-back {
 
             &::after {
-                top: 25em;
+                top: 31em;
                 left: 15%;
             }
         }

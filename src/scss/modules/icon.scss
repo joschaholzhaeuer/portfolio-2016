@@ -30,13 +30,41 @@ STYLESHEET: ICON
 
     &-wrapper {
         margin-bottom: $m-large;
+
+        &-detail {
+            margin: $m-large auto -4.8em auto;
+            text-align: center;
+        }
     }
 
-    &:hover {
-        color: $red;
-        background-color: $c-base;
-        box-shadow: 0 0 0 3px $red;
-        @include prefix( transition, all 0.1s ease-in-out );
+    &--active {
+
+        &:hover {
+            color: $red;
+            background-color: $c-base;
+            box-shadow: 0 0 0 3px $red;
+            @include prefix( transition, all 0.1s ease-in-out );
+        }
+    }
+
+    &--inactive {
+        cursor: default;
+    }
+}
+
+@include small {
+    .icon {
+
+        &-wrapper {
+
+            &-detail {
+                text-align: left;
+            }
+        }
+
+        &--inactive {
+            margin-right: 1.5em;
+        }
     }
 }
 
@@ -50,6 +78,13 @@ STYLESHEET: ICON
             margin-left: -16px;
             margin-top: -16px;
         }
+
+        &-wrapper {
+
+            &-detail {
+                margin-bottom: -5.15em;
+            }
+        }
     }
 }
 
@@ -62,6 +97,14 @@ STYLESHEET: ICON
         &::before {
             margin-left: -19px;
             margin-top: -19px;
+        }
+
+        &-wrapper {
+
+            &-detail {
+                margin-top: 5em;
+                margin-bottom: -5.55em;
+            }
         }
     }
 }

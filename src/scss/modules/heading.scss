@@ -27,7 +27,23 @@ STYLESHEET: HEADING
         padding-bottom: $m-small;
         background-color: $c-base;
         font-family: $f-base;
+        font-weight: 800;
         @include fontsize-11;
+    }
+
+    &-detaillink {
+        text-decoration: none;
+        font-weight: 800;
+        display: inline-block;
+        margin-top: $m-medium;
+        color: $red;
+        border: 3px solid $red;
+        padding: $m-small $m-medium;
+
+        &:hover {
+            background-color: $red;
+            color: $c-base;
+        }
     }
 
     &--high {
@@ -103,7 +119,8 @@ STYLESHEET: HEADING
         &-detailwrapper {
             margin-top: 20em;
             padding-right: 15%;
-            padding-left: $m-large;
+            padding-left: 4em;
+            padding-top: 4em;
             width: 70%;
 
             & .text {
@@ -118,6 +135,10 @@ STYLESHEET: HEADING
         &--detail {
             top: 2em;
             padding-left: 25%;
+        }
+
+        &-detaillink {
+            @include fontsize-14;
         }
     }
 }

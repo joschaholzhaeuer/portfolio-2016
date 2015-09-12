@@ -30,6 +30,11 @@ STYLESHEET: LOGO
 @include medium {
     .logo {
         width: 400px;
+
+        &-wrapper {
+            margin-top: 6em;
+            margin-bottom: 6em;
+        }
     }
 }
 
