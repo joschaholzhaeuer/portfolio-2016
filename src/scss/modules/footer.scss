@@ -27,7 +27,7 @@ STYLESHEET: FOOTER
 
     &-text {
         font-weight: 300;
-        @include fontsize-8;
+        @include font-size(0.8);
         margin-bottom: 0;
     }
 
@@ -75,7 +75,7 @@ STYLESHEET: FOOTER
         }
 
         &-text {
-            @include fontsize-10;
+            @include font-size(1);
         }
     }
 }
@@ -98,7 +98,7 @@ STYLESHEET: FOOTER
         }
 
         &-link {
-            @include fontsize-12;
+            @include font-size(1.2);
         }
     }
 }

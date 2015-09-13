@@ -28,7 +28,7 @@ STYLESHEET: HEADING
         background-color: $c-base;
         font-family: $f-base;
         font-weight: 800;
-        @include fontsize-11;
+        @include font-size(1.1);
     }
 
     &-detaillink {
@@ -50,6 +50,15 @@ STYLESHEET: HEADING
     &--high {
         display: block;
         color: $red;
+    }
+
+    &--error {
+        @include font-size(3.4);
+        padding-top: 0;
+    }
+
+    &--light {
+        font-family: $f-base;
     }
 }
 
@@ -85,7 +94,12 @@ STYLESHEET: HEADING
         &--detail {
             top: $m-medium;
             text-align: right;
-            width: 50%;
+            min-width: 50%;
+        }
+
+        &--error {
+            @include font-size(4.2);
+            padding-top: 0;
         }
     }
 }
@@ -112,6 +126,11 @@ STYLESHEET: HEADING
             top: 2em;
             padding-left: 25%;
         }
+
+        &--error {
+            @include font-size(6);
+            padding-top: 0;
+        }
     }
 }
 
@@ -127,7 +146,7 @@ STYLESHEET: HEADING
         }
 
         &-detaillabel {
-            @include fontsize-14;
+            @include font-size(1.4);
         }
 
         &--detail {
@@ -136,7 +155,12 @@ STYLESHEET: HEADING
         }
 
         &-detaillink {
-            @include fontsize-12;
+            @include font-size(1.2);
+        }
+
+        &--error {
+            @include font-size(8);
+            padding-top: 0;
         }
     }
 }

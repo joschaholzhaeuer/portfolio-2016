@@ -1,60 +1,40 @@
 <!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Page Not Found</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
+<html class="no-js" lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>404 - Seite nicht gefunden | Joscha Holzhäuer</title>
+        <meta name="description" content="Auf diese Seite wird weitergeleitet, wenn ein 404-Fehler auftritt.">
+        <meta name="keywords" content="Portfolio, Webdesign, Webentwicklung, Frontend, Web Development, Joscha Holzhäuer">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        * {
-            line-height: 1.2;
-            margin: 0;
-        }
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
-        html {
-            color: #888;
-            display: table;
-            font-family: sans-serif;
-            height: 100%;
-            text-align: center;
-            width: 100%;
-        }
+        <link rel="stylesheet" href="dist/css/style.css">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
-        body {
-            display: table-cell;
-            vertical-align: middle;
-            margin: 2em auto;
-        }
+        <section class="section">
+            <div class="clearfix project-detail">
+                <a href="index.html" class="project-back">
+                    <svg version="1.1" class="project-arrow-home" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 180.509 145.517" enable-background="new 0 0 180.509 145.517"
+                         xml:space="preserve">
+                    <polygon points="104.383,0 90.564,14.458 141.101,62.758 0,62.758 0,82.758 141.101,82.758 90.564,131.058
+                        104.383,145.517 180.509,72.758 "/>
+                    </svg>
+                </a>
+                <h1 class="heading heading-label heading--left heading--detail">Der Fehler</h1>
+                <div class="heading-detailwrapper">
+                    <h2 class="heading-detaillabel heading--error">4{}4</h2>
+                    <p class="text text--light lastitem">Ups! Die gesuchte Seite wurde leider nicht gefunden. Am besten ganz schnell wieder zurück nach Hause.</p>
+                </div>
+            </div>
+        </section>
 
-        h1 {
-            color: #555;
-            font-size: 2em;
-            font-weight: 400;
-        }
-
-        p {
-            margin: 0 auto;
-            width: 280px;
-        }
-
-        @media only screen and (max-width: 280px) {
-
-            body, p {
-                width: 95%;
-            }
-
-            h1 {
-                font-size: 1.5em;
-                margin: 0 0 0.3em;
-            }
-
-        }
-
-    </style>
-</head>
-<body>
-    <h1>Page Not Found</h1>
-    <p>Sorry, but the page you were trying to view does not exist.</p>
-</body>
+    </body>
 </html>
-<!-- IE needs 512+ bytes: http://blogs.msdn.com/b/ieinternals/archive/2010/08/19/http-error-pages-in-internet-explorer.aspx -->

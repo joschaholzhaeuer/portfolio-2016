@@ -15,35 +15,35 @@ h6 {
 h1 {
     margin-top: -2em;
     margin-bottom: $m-medium;
-    @include fontsize-24;
+    @include font-size(2.4);
 }
 
 @include medium {
     h1 {
-        @include fontsize-30;
+        @include font-size(3);
     }
 }
 
 @include large {
     h1 {
-        @include fontsize-36;
+        @include font-size(3.6);
     }
 }
 
 h2 {
-    @include fontsize-24;
+    @include font-size(2.4);
     margin-bottom: $m-medium;
 }
 
 @include medium {
     h2 {
-        @include fontsize-30;
+        @include font-size(3);
     }
 }
 
 @include large {
     h2 {
-        @include fontsize-36;
+        @include font-size(3.6);
     }
 }
 
@@ -53,7 +53,7 @@ p {
 }
 
 .text {
-    @include fontsize-10;
+    @include font-size(1);
 
     &--light {
         color: $c-light;
@@ -67,6 +67,10 @@ p {
     &--wrapper {
         padding-left: 5%;
         padding-right: 5%;
+    }
+
+    &--small {
+        @include font-size(1);
     }
 }
 
@@ -83,7 +87,7 @@ p {
 
 @include medium {
     .text {
-        @include fontsize-11;
+        @include font-size(1.1);
 
         &--wrapped {
             max-width: 450px;
@@ -93,10 +97,14 @@ p {
 
 @include large {
     .text {
-        @include fontsize-14;
+        @include font-size(1.4);
 
         &--wrapped {
             max-width: 550px;
+        }
+
+        &--small {
+            @include font-size(1.2);
         }
     }
 }

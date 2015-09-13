@@ -4,7 +4,7 @@ STYLESHEET: ICON
 ******************************************************************/
 
 .icon {
-    @include fontsize-18;
+    @include font-size(1.8);
     cursor: pointer;
     padding: $m-small;
     background-color: $red;
@@ -70,7 +70,7 @@ STYLESHEET: ICON
 
 @include medium {
     .icon {
-        @include fontsize-20;
+        @include font-size(2);
         width: 65px;
         height: 65px;
 
@@ -90,7 +90,7 @@ STYLESHEET: ICON
 
 @include large {
     .icon {
-        @include fontsize-24;
+        @include font-size(2.4);
         width: 80px;
         height: 80px;
 
