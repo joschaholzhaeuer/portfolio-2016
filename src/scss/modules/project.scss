@@ -142,6 +142,8 @@ STYLESHEET: PROJECT
             top: 2.5em;
             left: 0;
             @include font-size(1.6);
+            min-width: 50%;
+            text-align: right;
         }
 
         &-sub {
@@ -154,6 +156,7 @@ STYLESHEET: PROJECT
             padding: $m-medium $m-small $m-medium $m-medium;
             bottom: 2.5em;
             right: 0;
+            min-width: 70%;
         }
     }
 
@@ -303,7 +306,7 @@ STYLESHEET: PROJECT
 
             &-main {
                 @include font-size(2);
-                top: 1.5em;
+                top: 1em;
                 padding-left: 5%;
             }
 
@@ -411,15 +414,13 @@ STYLESHEET: PROJECT
 
             &-main {
                 @include font-size(2.8);
-                top: 1em;
                 padding-left: 10%;
             }
 
             &-sub {
                 top: auto;
                 bottom: $m-large;
-                padding-right: 10%;
-                padding-left: 2em;
+                padding: 2em 10% 2em 2em;
             }
         }
 

@@ -60,6 +60,10 @@ STYLESHEET: HEADING
     &--light {
         font-family: $f-base;
     }
+
+    &--minor {
+        color: $c-light;
+    }
 }
 
 @include small {
