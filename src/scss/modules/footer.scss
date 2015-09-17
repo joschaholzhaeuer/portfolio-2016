@@ -42,6 +42,7 @@ STYLESHEET: FOOTER
     &-link {
         color: $red-light;
         text-decoration: none;
+        @include prefix( transition, all 0.2s ease-in-out );
 
         &:visited {
             color: $red-light;
