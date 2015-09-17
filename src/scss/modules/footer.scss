@@ -26,7 +26,6 @@ STYLESHEET: FOOTER
     }
 
     &-text {
-        font-weight: 300;
         @include font-size(0.8);
         margin-bottom: 0;
     }
@@ -43,6 +42,7 @@ STYLESHEET: FOOTER
         color: $red-light;
         text-decoration: none;
         @include prefix( transition, all 0.2s ease-in-out );
+        @include font-size(0.9);
 
         &:visited {
             color: $red-light;
@@ -76,6 +76,10 @@ STYLESHEET: FOOTER
         }
 
         &-text {
+            @include font-size(0.9);
+        }
+
+        &-link {
             @include font-size(1);
         }
     }
@@ -96,6 +100,10 @@ STYLESHEET: FOOTER
             height: 70px;
             margin-left: -35px;
             top: -($m-large);
+        }
+
+        &-text {
+            @include font-size(1.1);
         }
 
         &-link {

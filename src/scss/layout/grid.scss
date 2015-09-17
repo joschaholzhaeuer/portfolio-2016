@@ -7,6 +7,10 @@ STYLESHEET: GRID
     text-align: center;
     position: relative;
     z-index: 15;
+
+    &-impressum {
+        margin-top: 50px;
+    }
 }
 
 @include small {
@@ -14,6 +18,10 @@ STYLESHEET: GRID
 
         &-projects {
             margin-bottom: 200px;
+        }
+
+        &-impressum {
+            margin-top: 0;
         }
     }
 }
