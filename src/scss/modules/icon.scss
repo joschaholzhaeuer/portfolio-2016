@@ -50,6 +50,21 @@ STYLESHEET: ICON
     &--inactive {
         cursor: default;
     }
+
+    &--block {
+        display: block;
+        margin-top: $m-medium;
+        margin-left: $m-medium;
+    }
+
+    &--overlap {
+        position: absolute;
+
+        &--left {
+            top: 120px;
+            left: 50%;
+        }
+    }
 }
 
 @include small {
