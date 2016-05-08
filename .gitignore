@@ -2,3 +2,6 @@
 node_modules/**
 *.sublime-project
 *.sublime-workspace
+
+# no need for local files
+index.php
