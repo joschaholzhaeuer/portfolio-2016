@@ -23,12 +23,14 @@ body {
 }
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: $red;
+    color: $white;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: $red;
+    color: $white;
     text-shadow: none;
 }
 

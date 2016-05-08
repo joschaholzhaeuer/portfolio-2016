@@ -72,6 +72,15 @@ p {
     &--small {
         @include font-size(1);
     }
+
+    &--bold {
+        font-weight: 700;
+    }
+
+    &--mt {
+        display: block;
+        margin-top: 0.5em;
+    }
 }
 
 @include small {
