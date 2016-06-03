@@ -57,19 +57,15 @@ STYLESHEET: BACKTOTOP
     .cd-top {
 
         &-arrow {
-            width: 50px;
-            height: 50px;
-            bottom: 5%;
-            right: 3%;
-            margin-bottom: 1.6em;
-            margin-right: 1.6em;
+            width: 40px;
+            height: 40px;
+            margin-bottom: 1.3em;
+            margin-right: 1.25em;
         }
 
          &::after {
-            width: 100px;
-            height: 100px;
-            bottom: 5%;
-            right: 3%;
+            width: 80px;
+            height: 80px;
         }
     }
 }

@@ -468,6 +468,20 @@ STYLESHEET: PROJECT
                 height: 100px;
             }
 
+            &--left {
+
+                &::after {
+                    left: 35%;
+                }
+            }
+
+            &--right {
+
+                &::after {
+                    right: 35%;
+                }
+            }
+
             &-arrow {
                 width: 50px;
                 height: 50px;
@@ -475,11 +489,13 @@ STYLESHEET: PROJECT
                 &--left {
                     margin-left: 1.5em;
                     margin-top: 1.55em;
+                    left: 35%;
                 }
 
                 &--right {
                     margin-right: 1.5em;
                     margin-top: 1.55em;
+                    right: 35%;
                 }
             }
         }

@@ -68,6 +68,19 @@ module.exports = function(grunt) {
         }
       }
     },
+    imagemin: {
+      jpgs: {
+        options: {
+            progressive: true
+        },
+        files: [{
+            expand: true,
+            cwd: 'src/img',
+            src: ['*.jpg', '*.png', '*.svg'],
+            dest: 'dist/img'
+        }]
+      }
+    },
     postcss: {
       options: {
         map: false,
@@ -113,6 +126,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-postcss');
 
   grunt.registerTask('default', ['watch']);
