@@ -1,0 +1,50 @@
+/******************************************************************
+STYLESHEET: LOGO
+
+******************************************************************/
+
+.logo {
+    width: 280px;
+    display: block;
+    margin: 0 auto;
+
+    &-wrapper {
+        margin-top: $m-large;
+        margin-bottom: $m-large;
+        position: relative;
+        z-index: 20;
+    }
+}
+
+@include small {
+    .logo {
+        width: 350px;
+
+        &-wrapper {
+            margin-top: 5em;
+            margin-bottom: 5em;
+        }
+    }
+}
+
+@include medium {
+    .logo {
+        width: 400px;
+
+        &-wrapper {
+            margin-top: 6em;
+            margin-bottom: 6em;
+        }
+    }
+}
+
+@include large {
+    .logo {
+        width: 500px;
+
+        &-wrapper {
+            margin-top: 6em;
+            margin-bottom: 6em;
+        }
+    }
+}

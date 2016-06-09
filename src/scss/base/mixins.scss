@@ -8,73 +8,51 @@ STYLESHEET: STYLE
 
 
 // BREAKPOINTS
+/* USAGE: @include medium {...}; */
+@mixin small {
+    @media only screen and (min-width: #{$w-small}) {
+        @content;
+    }
+}
 
-// USAGE: @include medium {...};
 @mixin medium {
-    @media only screen and (min-width: #{$medium-width}) {
+    @media only screen and (min-width: #{$w-medium}) {
         @content;
     }
 }
 
 @mixin large {
-    @media only screen and (min-width: #{$large-width}) {
+    @media only screen and (min-width: #{$w-large}) {
         @content;
     }
 }
 
 
-// TYPOGRAPHY
+// PREFIXES
+/* USAGE: @include prefix(transform, rotate(42deg), webkit ms); */
+@mixin prefix($property, $value, $vendors: webkit moz ms o) {
+      @if $vendors {
+        @each $vendor in $vendors {
+          #{"-" + $vendor + "-" + $property}: #{$value};
+        }
+      }
+      #{$property}: #{$value};
+}
 
-// USAGE: @include font-size(16/10);
-@mixin font-size($sizeValue: 16/10) {
+
+// TYPOGRAPHY
+/* USAGE: @include font-size(2.4); */
+@mixin font-size($sizeValue: 1.6) {
   font-size: ($sizeValue * 10) + px;
   font-size: $sizeValue + rem;
 }
 
-@mixin line-height($sizeValue: 16/10) {
+@mixin line-height($sizeValue: 1.6) {
   line-height: ($sizeValue * 10) + px;
   line-height: $sizeValue + rem;
 }
 
-@mixin letter-spacing($sizeValue: 16/10) {
+@mixin letter-spacing($sizeValue: 1.6) {
   letter-spacing: ($sizeValue * 10) + px;
   letter-spacing: $sizeValue + rem;
-}
-
-// USAGE: @include fontsize-12;
-@mixin fontsize-10 {
-  @include font-size(10/10);
-}
-@mixin fontsize-11 {
-  @include font-size(11/10);
-}
-@mixin fontsize-12 {
-  @include font-size(12/10);
-}
-@mixin fontsize-14 {
-  @include font-size(14/10);
-}
-@mixin fontsize-16 {
-  @include font-size(16/10);
-}
-@mixin fontsize-18 {
-  @include font-size(18/10);
-}
-@mixin fontsize-20 {
-  @include font-size(20/10);
-}
-@mixin fontsize-22 {
-  @include font-size(22/10);
-}
-@mixin fontsize-24 {
-  @include font-size(24/10);
-}
-@mixin fontsize-26 {
-  @include font-size(26/10);
-}
-@mixin fontsize-28 {
-  @include font-size(28/10);
-}
-@mixin fontsize-30 {
-  @include font-size(30/10);
 }

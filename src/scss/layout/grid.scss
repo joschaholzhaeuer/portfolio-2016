@@ -2,3 +2,44 @@
 STYLESHEET: GRID
 
 ******************************************************************/
+
+.section {
+    text-align: center;
+    position: relative;
+    z-index: 15;
+
+    &-impressum {
+        margin-top: 50px;
+    }
+}
+
+@include small {
+    .section {
+
+        &-projects {
+            margin-bottom: 200px;
+        }
+
+        &-impressum {
+            margin-top: 0;
+        }
+    }
+}
+
+@include medium {
+    .section {
+
+        &-projects {
+            margin-bottom: 360px;
+        }
+    }
+}
+
+@include large {
+    .section {
+
+        &-projects {
+            margin-bottom: 540px;
+        }
+    }
+}

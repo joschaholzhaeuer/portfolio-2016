@@ -1,0 +1,27 @@
+/******************************************************************
+STYLESHEET: CHART
+
+******************************************************************/
+
+.chart {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: $red;
+    border-radius: 50%;
+    top: 10em;
+    left: 50%;
+    margin-left: -125px;
+
+    &--inner {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background-color: $black;
+        border-radius: 50%;
+        top: 50%;
+        margin-top: -75px;
+        left: 50%;
+        margin-left: -75px;
+    }
+}

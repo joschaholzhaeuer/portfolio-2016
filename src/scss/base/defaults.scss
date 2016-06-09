@@ -10,7 +10,10 @@ html {
 }
 
 body {
-    font-family: $base-font;
+    font-family: $f-base;
+    color: $c-base;
+    background-color: $c-dark;
+    overflow-x: hidden;
 }
 
 *,
@@ -20,21 +23,22 @@ body {
 }
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: $red;
+    color: $white;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: $red;
+    color: $white;
     text-shadow: none;
 }
 
 hr {
     display: block;
-    height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
+    border-top: 3px solid $c-medium;
+    margin: 0;
     padding: 0;
 }
 
@@ -53,6 +57,14 @@ fieldset {
     padding: 0;
 }
 
+header {
+    position: relative;
+}
+
 textarea {
     resize: vertical;
+}
+
+figure {
+    margin: 0;
 }

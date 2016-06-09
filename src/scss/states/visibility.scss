@@ -8,7 +8,16 @@ STYLESHEET: VISIBILITY
 }
 
 .is-invisible {
+    opacity: 0;
     visibility: hidden;
+}
+
+.element-fade {
+    opacity: 0;
+
+    &-now {
+        opacity: 0;
+    }
 }
 
 .is-visuallyhidden {
@@ -30,4 +39,102 @@ STYLESHEET: VISIBILITY
         position: static;
         width: auto;
     }
+}
+
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+        @include prefix( transform, scale(0.5) );
+   }
+    100% {
+        @include prefix( transition, opacity 1s ease-in );
+        @include prefix( transform, scale(1) );
+   }
+}
+
+@-moz-keyframes fade-in {
+    0% {
+        @include prefix( transform, scale(0.5) );
+   }
+    100% {
+        @include prefix( transform, scale(1) );
+   }
+}
+
+@keyframes fade-in {
+    0% {
+        @include prefix( transform, scale(0.5) );
+   }
+    100% {
+        @include prefix( transform, scale(1) );
+   }
+}
+
+.fade-in {
+    @include prefix( animation, fade-in 1s 1 );
+}
+
+
+@-webkit-keyframes slide-in--left {
+    0% {
+        @include prefix( transform, translateX(-100%) );
+   }
+    100% {
+        @include prefix( transform, translateX(0) );
+   }
+}
+
+@-moz-keyframes slide-in--left {
+    0% {
+        @include prefix( transform, translateX(-100%) );
+   }
+    100% {
+        @include prefix( transform, translateX(0) );
+   }
+}
+
+@keyframes slide-in--left {
+    0% {
+        @include prefix( transform, translateX(-100%) );
+   }
+    100% {
+        @include prefix( transform, translateX(0) );
+   }
+}
+
+.slide-in--left {
+    @include prefix( animation, slide-in--left 1s 1 );
+}
+
+
+@-webkit-keyframes slide-in-right {
+    0% {
+        @include prefix( transform, translateX(100%) );
+   }
+    100% {
+        @include prefix( transform, translateX(0) );
+   }
+}
+
+@-moz-keyframes slide-in-right {
+    0% {
+        @include prefix( transform, translateX(100%) );
+   }
+    100% {
+        @include prefix( transform, translateX(0) );
+   }
+}
+
+@keyframes slide-in--right {
+    0% {
+        @include prefix( transform, translateX(100%) );
+   }
+    100% {
+        @include prefix( transform, translateX(0) );
+   }
+}
+
+.slide-in--right {
+    @include prefix( animation, slide-in--right 1s 1 );
 }

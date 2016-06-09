@@ -1,0 +1,572 @@
+/******************************************************************
+STYLESHEET: PROJECT
+
+******************************************************************/
+
+.project {
+
+    &-grid {
+        padding: 40px 0 0 0;
+        margin: 0 5% 0 5%;
+
+        &-item {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            padding: 20px;
+            background-color: $c-medium;
+            border-radius: 25px;
+            margin-bottom: 40px;
+
+            &--mobile {
+                padding: 20px 10px 40px;
+                max-width: 260px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        &-detail {
+            margin-top: $m-large;
+            margin-left: 0;
+            margin-right: 0;
+
+            &-item {
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+        }
+    }
+
+    &-img {
+        width: 150%;
+        margin-left: -25%;
+        height: auto;
+        @include prefix( transition, opacity 0.2s ease-in-out );
+        @include prefix( transform, translate3d( 0, 0, 0 ) );
+
+
+        &-frame {
+            overflow: hidden;
+            position: relative;
+            height: auto;
+            max-height: 300px;
+
+            &:hover {
+
+                & .project-img {
+                    opacity: 0.1;
+                }
+
+                & .project-heading {
+                    visibility: visible;
+                    opacity: 1;
+                    @include prefix( transition, opacity 0.2s ease-in-out );
+                }
+            }
+        }
+    }
+
+    &-detailimg {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+
+        &-frame {
+            max-height: none;
+        }
+    }
+
+    &-arrow {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+        left: 50%;
+        margin-left: -50px;
+        z-index: 10;
+        opacity: 0;
+        visibility: hidden;
+        fill: $c-dark;
+
+        &-home {
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            @include prefix( transform, rotate(180deg) );
+            top: 1.7em;
+            left: 5%;
+            fill: $c-dark;
+            @include prefix( transition, fill 0.1s ease-in-out );
+        }
+    }
+
+    &-back {
+        &:hover {
+
+            .project-arrow-home {
+                fill: $white;
+            }
+        }
+    }
+
+    &-link {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 20;
+        text-indent: -200%;
+    }
+
+    &-heading {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        visibility: hidden;
+        opacity: 0;
+
+        &-main {
+            position: absolute;
+            display: inline-block;
+            background-color: $red;
+            color: $black;
+            margin: 0;
+            padding: $m-small $m-medium $m-small $m-small;
+            font-weight: 400;
+            top: 2.5em;
+            left: 0;
+            @include font-size(1.6);
+            min-width: 50%;
+            text-align: right;
+        }
+
+        &-sub {
+            position: absolute;
+            display: inline-block;
+            background-color: $c-base;
+            font-weight: 800;
+            color: $c-light;
+            margin: 0;
+            padding: $m-medium $m-small $m-medium $m-medium;
+            bottom: 2.5em;
+            right: 0;
+            min-width: 70%;
+        }
+    }
+
+    &-details {
+        width: 100%;
+
+        &-heading {
+            font-weight: 400;
+            color: $c-light;
+            @include font-size(1.8);
+            background-color: $c-medium;
+            padding: $m-small $m-medium;
+        }
+
+        &-text {
+            color: $c-light;
+            background-color: $c-medium;
+            padding: $m-medium $m-large;
+        }
+    }
+
+    &-next {
+
+        &:hover {
+
+            &::after {
+                background-color: $c-dark;
+                box-shadow: 0 0 0 3px $red;
+            }
+
+            .project-next-arrow {
+                fill: $red;
+            }
+        }
+
+        &-wrapper {
+            width: 100%;
+            height: 50px;
+            position: relative;
+        }
+
+        &::after {
+            content: "";
+            display: table;
+            width: 55px;
+            height: 55px;
+            background-color: $red;
+            @include prefix( transform, rotate(45deg) );
+            position: absolute;
+            @include prefix( transition, all 0.1s ease-in-out );
+        }
+
+        &--left {
+
+            &::after {
+                left: 15%;
+            }
+        }
+
+        &--right {
+
+            &::after {
+                right: 15%;
+            }
+        }
+
+        &-arrow {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            fill: $c-dark;
+            z-index: 20;
+            @include prefix( transition, all 0.1s ease-in-out );
+
+            &--left {
+                @include prefix( transform, rotate(180deg) );
+                left: 15%;
+                margin-left: 1em;
+                margin-top: 0.9em;
+            }
+
+            &--right {
+                right: 15%;
+                margin-right: 1em;
+                margin-top: 0.9em;
+            }
+        }
+    }
+}
+
+@include small {
+    .project {
+
+        &-img {
+            width: 100%;
+            margin-left: 0;
+
+            &-frame {
+                max-height: none;
+
+                &:hover {
+
+                    &::after {
+                        content: "";
+                        display: table;
+                        width: 100px;
+                        height: 100px;
+                        background-color: $red;
+                        @include prefix( transform, rotate(45deg) );
+                        position: absolute;
+                        z-index: 5;
+                        top: 50%;
+                        margin-top: -50px;
+                        left: 50%;
+                        margin-left: -50px;
+                    }
+
+                    & .project-arrow {
+                        opacity: 1;
+                        visibility: visible;
+                        margin-left: -25px;
+                        @include prefix( transition, margin-left 0.2s ease-in-out );
+                    }
+                }
+            }
+        }
+
+        &-grid {
+            padding-top: 160px;
+
+            &-item {
+                padding: 40px 30px;
+                margin-bottom: 80px;
+
+                &--mobile {
+                    max-width: 320px;
+                    padding: 40px 10px 60px;
+                }
+            }
+
+            &-detail {
+                padding-top: 100px;
+            }
+        }
+
+        &-heading {
+
+            &-main {
+                @include font-size(2);
+                top: 1em;
+                padding-left: 5%;
+            }
+
+            &-sub {
+                bottom: $m-large;
+                padding-right: 5%;
+            }
+        }
+
+        &-arrow {
+
+            &-home {
+                top: 19.95em;
+                left: 10%;
+                z-index: 20;
+                margin-left: -1em;
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        &-back {
+
+            &::after {
+                content: "";
+                display: table;
+                width: 55px;
+                height: 55px;
+                background-color: $red;
+                @include prefix( transform, rotate(45deg) );
+                position: absolute;
+                z-index: 5;
+                top: 19em;
+                left: 10%;
+                margin-left: -30px;
+                @include prefix( transition, all 0.1s ease-in-out );
+            }
+
+            &:hover {
+
+                .project-arrow-home {
+                    fill: $red;
+                }
+
+                &::after {
+                    background-color: $c-dark;
+                    box-shadow: 0 0 0 3px $red;
+                }
+            }
+        }
+
+        &-details {
+            max-width: none;
+            display: table;
+            margin-bottom: $m-large;
+
+            &-heading {
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            &-text {
+                display: table-cell;
+                vertical-align: middle;
+                border-left: $m-medium solid $c-dark;
+                width: 50%;
+                text-align: left;
+                padding-right: 5%;
+            }
+        }
+    }
+}
+
+@include medium {
+    .project {
+
+        &-grid {
+            padding-top: 220px;
+            margin-left: 10%;
+            margin-right: 10%;
+
+            &-detail {
+                padding-top: 140px;
+                margin-left: 0;
+                margin-right: 0;
+
+                &-item {
+                    margin-left: 10%;
+                    margin-right: 10%;
+                }
+            }
+
+            &-item {
+                padding: 60px 40px;
+                margin-bottom: 150px;
+
+                &--mobile {
+                    max-width: 380px;
+                    padding: 40px 10px 60px;
+                }
+            }
+        }
+
+        &-heading {
+
+            &-main {
+                @include font-size(2.8);
+                padding-left: 10%;
+            }
+
+            &-sub {
+                top: auto;
+                bottom: $m-large;
+                padding: 2em 10% 2em 2em;
+            }
+        }
+
+        &-arrow {
+
+            &-home {
+                width: 50px;
+                height: 50px;
+                top: 25.6em;
+                left: 15%;
+                z-index: 20;
+                margin-left: -0.5em;
+            }
+        }
+
+        &-back {
+
+            &::after {
+                width: 100px;
+                height: 100px;
+                top: 24em;
+                left: 15%;
+            }
+        }
+
+        &-details {
+
+            &-heading {
+                @include font-size(2.4);
+                border-right: $m-small solid $c-dark;
+            }
+
+            &-text {
+                @include font-size(1.1);
+                border-left: 0;
+                width: 70%;
+                padding-right: 10%;
+            }
+        }
+
+        &-next {
+
+            &::after {
+                width: 100px;
+                height: 100px;
+            }
+
+            &--left {
+
+                &::after {
+                    left: 35%;
+                }
+            }
+
+            &--right {
+
+                &::after {
+                    right: 35%;
+                }
+            }
+
+            &-arrow {
+                width: 50px;
+                height: 50px;
+
+                &--left {
+                    margin-left: 1.5em;
+                    margin-top: 1.55em;
+                    left: 35%;
+                }
+
+                &--right {
+                    margin-right: 1.5em;
+                    margin-top: 1.55em;
+                    right: 35%;
+                }
+            }
+        }
+    }
+}
+
+@include large {
+    .project {
+
+        &-grid {
+            padding-top: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1200px;
+
+            &-detail {
+                padding-top: 180px;
+                margin-left: 0;
+                margin-right: 0;
+                max-width: none;
+
+                &-item {
+                    margin-left: auto;
+                    margin-right: auto;
+                    max-width: 1200px;
+                }
+            }
+
+            &-item {
+                margin-bottom: 200px;
+            }
+        }
+
+        &-arrow {
+
+            &-home {
+                top: 32.6em;
+                left: 15%;
+                z-index: 20;
+                margin-left: -0.5em;
+            }
+        }
+
+        &-heading {
+
+            &-main {
+                @include font-size(3.2);
+            }
+
+            &-sub {
+                @include font-size(1.4);
+            }
+        }
+
+        &-back {
+
+            &::after {
+                top: 31em;
+                left: 15%;
+            }
+        }
+
+        &-details {
+
+            &-heading {
+                @include font-size(2.4);
+            }
+
+            &-text {
+                @include font-size(1.4);
+            }
+        }
+    }
+}

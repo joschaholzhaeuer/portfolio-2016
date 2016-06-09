@@ -1,0 +1,125 @@
+/******************************************************************
+STYLESHEET: ICON
+
+******************************************************************/
+
+.icon {
+    @include font-size(1.8);
+    cursor: pointer;
+    padding: $m-small;
+    background-color: $red;
+    width: 55px;
+    height: 55px;
+    text-align: center;
+    color: $c-base;
+    display: inline-block;
+    @include prefix( transform, rotate(45deg) );
+    margin-right: $m-medium;
+    position: relative;
+    @include prefix( transition, all 0.1s ease-in-out );
+
+    &::before {
+        position: absolute;
+        display: inline-block;
+        @include prefix( transform, rotate(-45deg) );
+        top: 50%;
+        left: 50%;
+        margin-left: -14px;
+        margin-top: -14px;
+    }
+
+    &-wrapper {
+        margin-bottom: $m-large;
+
+        &-detail {
+            margin: $m-large auto -4.8em auto;
+            text-align: center;
+        }
+    }
+
+    &--active {
+
+        &:hover {
+            color: $red;
+            background-color: $c-base;
+            box-shadow: 0 0 0 3px $red;
+            @include prefix( transition, all 0.1s ease-in-out );
+        }
+    }
+
+    &--inactive {
+        cursor: default;
+    }
+
+    &--block {
+        display: block;
+        margin-top: $m-medium;
+        margin-left: $m-medium;
+    }
+
+    &--overlap {
+        position: absolute;
+
+        &--left {
+            top: 120px;
+            left: 50%;
+        }
+    }
+}
+
+@include small {
+    .icon {
+
+        &-wrapper {
+
+            &-detail {
+                text-align: left;
+            }
+        }
+
+        &--inactive {
+            margin-right: 1.5em;
+        }
+    }
+}
+
+@include medium {
+    .icon {
+        @include font-size(2);
+        width: 65px;
+        height: 65px;
+
+        &::before {
+            margin-left: -16px;
+            margin-top: -16px;
+        }
+
+        &-wrapper {
+
+            &-detail {
+                margin-bottom: -5.15em;
+            }
+        }
+    }
+}
+
+@include large {
+    .icon {
+        @include font-size(2.4);
+        width: 80px;
+        height: 80px;
+
+        &::before {
+            margin-left: -19px;
+            margin-top: -19px;
+        }
+
+        &-wrapper {
+
+            &-detail {
+                margin-top: 5em;
+                margin-bottom: -5.55em;
+            }
+        }
+    }
+}

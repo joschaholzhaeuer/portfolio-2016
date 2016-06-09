@@ -9,38 +9,111 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $heading-font;
+    font-family: $f-heading;
 }
 
 h1 {
-    text-transform: uppercase;
-    color: $base-color;
-    margin-top: $small-margin;
-    margin-bottom: $medium-margin;
+    margin-top: -2em;
+    margin-bottom: $m-medium;
+    @include font-size(2.4);
+}
+
+@include medium {
+    h1 {
+        @include font-size(3);
+    }
+}
+
+@include large {
+    h1 {
+        @include font-size(3.6);
+    }
 }
 
 h2 {
-
+    @include font-size(2.4);
+    margin-bottom: $m-medium;
 }
 
-h3 {
-
+@include medium {
+    h2 {
+        @include font-size(3);
+    }
 }
 
-h4 {
-
-}
-
-h5 {
-
-}
-
-h6 {
-
+@include large {
+    h2 {
+        @include font-size(3.6);
+    }
 }
 
 p {
-    color: $base-color;
-    margin-top: $small-margin;
-    margin-bottom: $medium-margin;
+    margin-top: $m-small;
+    margin-bottom: $m-large;
+}
+
+.text {
+    @include font-size(1);
+
+    &--light {
+        color: $c-light;
+    }
+
+    &--center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &--wrapper {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    &--small {
+        @include font-size(1);
+    }
+
+    &--bold {
+        font-weight: 700;
+    }
+
+    &--mt {
+        display: block;
+        margin-top: 0.5em;
+    }
+}
+
+@include small {
+    .text {
+
+        &--wrapped {
+            padding-left: 0;
+            padding-right: 0;
+            max-width: 400px;
+        }
+    }
+}
+
+@include medium {
+    .text {
+        @include font-size(1.1);
+
+        &--wrapped {
+            max-width: 450px;
+        }
+    }
+}
+
+@include large {
+    .text {
+        @include font-size(1.4);
+
+        &--wrapped {
+            max-width: 550px;
+        }
+
+        &--small {
+            @include font-size(1.2);
+        }
+    }
 }
