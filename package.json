@@ -1,6 +1,6 @@
 {
-  "name": "portfolio_new",
-  "version": "0.0.0",
+  "name": "portfolio-new",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/joschaholzhaeuer/portfolio_new.git"
+    "url": "git@gitlab.com:joscha/portfolio-new.git"
   },
   "author": "joscha holzhaeuer",
   "license": "ISC",
