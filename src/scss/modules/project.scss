@@ -173,7 +173,7 @@ STYLESHEET: PROJECT
 
         &-text {
             color: $c-light;
-            background-color: $c-medium;
+            // background-color: $c-medium;
             padding: $m-medium $m-large;
         }
     }
@@ -360,21 +360,22 @@ STYLESHEET: PROJECT
 
         &-details {
             max-width: none;
-            display: table;
+            // display: table;
             margin-bottom: $m-large;
 
             &-heading {
-                display: table-cell;
-                vertical-align: middle;
+                // display: table-cell;
+                // vertical-align: middle;
             }
 
             &-text {
-                display: table-cell;
-                vertical-align: middle;
-                border-left: $m-medium solid $c-dark;
-                width: 50%;
-                text-align: left;
-                padding-right: 5%;
+                // display: table-cell;
+                // vertical-align: middle;
+                // border-left: $m-medium solid $c-dark;
+                // width: 50%;
+                // text-align: left;
+                padding-left: 10%;
+                padding-right: 10%;
             }
         }
     }
@@ -450,14 +451,15 @@ STYLESHEET: PROJECT
 
             &-heading {
                 @include font-size(2.4);
-                border-right: $m-small solid $c-dark;
+                // border-right: $m-small solid $c-dark;
             }
 
             &-text {
                 @include font-size(1.1);
-                border-left: 0;
-                width: 70%;
-                padding-right: 10%;
+                // border-left: 0;
+                // width: 70%;
+                padding-left: 20%;
+                padding-right: 20%;
             }
         }
 
@@ -566,6 +568,8 @@ STYLESHEET: PROJECT
 
             &-text {
                 @include font-size(1.4);
+                padding-left: 30%;
+                padding-right: 30%;
             }
         }
     }
