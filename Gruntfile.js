@@ -63,6 +63,7 @@ module.exports = function(grunt) {
           'dist/meineenergie.html': 'src/meineenergie.html',
           'dist/mytrops.html': 'src/mytrops.html',
           'dist/reftreff.html': 'src/reftreff.html',
+          'dist/dreiqbik.html': 'src/dreiqbik.html',
           'dist/impressum.html': 'src/impressum.html',
           'dist/404.html': 'src/404.html'
         }
